@@ -63,7 +63,7 @@ int main(void){
 	cout<<"Con la sua intelligenza, nulla, nemmeno il più difficile degli indovinelli può fermarlo...\n";
 	cout<<"speriamo però che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
 	cout<<"  Astuzia=5 Agilità=1, Coraggio 3 \n";
-
+	cout<<"ciao";
 	//cout<<"premere invio per continuare...";
 	return 0;
 }
