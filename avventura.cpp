@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include <cstdlib>
 #include <ctime>
 #include <cstring>
@@ -48,21 +48,21 @@ int main(void){
 	cout<<"hai solo una soluzione per scappare, arrivare alla fine...\n";
 	cout<<endl;
 	cout<<"Scegli un personaggio per continuare...\n";
-	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticità ed è molto furbo.\n";  
-	cout<<"  Astuzia=4 Agilità=5 Coraggio=2 \n";
+	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticitÃ  ed Ã¨ molto furbo.\n";  
+	cout<<"  Astuzia=4 AgilitÃ =5 Coraggio=2 \n";
 	cout<<endl;
-	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare l’avventura! \n";
-	cout<<"Grazie alla sua età e alla sua saggezza, è in grado di risolvere qualsiasi tipo di enigma, anche i più complicati!\n";  
-	cout<<"  Astuzia=5 Agilità=1 Coraggio=3\n";
+	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare lâ€™avventura! \n";
+	cout<<"Grazie alla sua etÃ  e alla sua saggezza, Ã¨ in grado di risolvere qualsiasi tipo di enigma, anche i piÃ¹ complicati!\n";  
+	cout<<"  Astuzia=5 AgilitÃ =1 Coraggio=3\n";
 	cout<<endl;
-	cout<<"-Melany: una ragazzina dolce e innocente….all’apparenza! In realtà Melany ha un grande coraggio,\n";
+	cout<<"-Melany: una ragazzina dolce e innocenteâ€¦.allâ€™apparenza! In realtÃ  Melany ha un grande coraggio,\n";
 	cout<<"non si ferma davanti a niente a nessuno, una vera e propria temeraria!\n ";
-	cout<<"  Astuzia=2 Agilità=3 Coraggio=5\n";
+	cout<<"  Astuzia=2 AgilitÃ =3 Coraggio=5\n";
 	cout<<endl;
 	cout<<"-Alfred: il vero e proprio intelligentone...purtroppo gli piacciono davvero tanto le merendine!";
-	cout<<"Con la sua intelligenza, nulla, nemmeno il più difficile degli indovinelli può fermarlo...\n";
-	cout<<"speriamo però che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
-	cout<<"  Astuzia=5 Agilità=1, Coraggio 3 \n";
+	cout<<"Con la sua intelligenza, nulla, nemmeno il piÃ¹ difficile degli indovinelli puÃ² fermarlo...\n";
+	cout<<"speriamo perÃ² che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
+	cout<<"  Astuzia=5 AgilitÃ =1, Coraggio 3 \n";
 
 	//cout<<"premere invio per continuare...";
 	return 0;
