@@ -63,8 +63,27 @@ int main(void){
 	cout<<"Con la sua intelligenza, nulla, nemmeno il più difficile degli indovinelli può fermarlo...\n";
 	cout<<"speriamo però che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
 	cout<<"  Astuzia=5 Agilità=1, Coraggio 3 \n";
-	cout<<"ciao";
-	//cout<<"premere invio per continuare...";
-	return 0;
+	cout<<endl;
+	cout<<"Bene, ora è il momento di scegliere il personaggio che vuoi essere in questa fantastica avventura!\n"
+	cout<<"Chi vuoi essere tra: Zack, John, Melany e Alfred?"
+	cin>>nome_personaggio;
+	cout<<endl;
+	cout<<""
+	cout<<"Ottima scelta"<<nome_personaggio<<"! E' il momento di iniziare!";
+	cout<<endl;
+	cout<<"Cominciato il tuo cammino, i problemi non tardano ad arrivare...ti trovi davanti ad un bivio.\n"
+	cout<<"Puoi scegliere due strade: se vai a sinistra, raggiungerai le cascate";
+	cout<<"Se invece sceglierai la strada sulla destra, arriverai una fitta vegetazione..."
+	cout<<endl;
+	cout<<"Fai la tua scelta! Digita" "sinistra" "per scegliere la strada che ti porterà alle cascate, altrimenti digita ""destra""per scegliere la strada che ti porterà nella fitta vegetazione...\n;
+	cin>>scelta_bivio1;
+	cout<<endl;
+	if(scelta_bivio1==sinistra){
+		cout<<"Perfetto! Dirigiamoci verso le cascate!";
+	} 
+		else if(scelta_bivio1==destra){
+			cout<<"Perfetto! Dirigiamoci verso la vegetazione!";
+		}
+	
 }
 
