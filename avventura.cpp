@@ -109,7 +109,7 @@ int matrice(int b[][COLUMNS],int &numero_vite,int &suggerimenti){
     cin>>check_matrice;
     
     while(check_matrice==4){
-    	cout<<"la diagonale principale Ã¨ composta dai numeri che hanno stessi indici \n";
+    	cout<<"la diagonale principale è composta dai numeri che hanno stessi indici \n";
     	suggerimenti=suggerimenti-1;
     	cin>>check_matrice;
 	}
@@ -180,21 +180,21 @@ int main(void){
 	cout<<"hai solo una soluzione per scappare, arrivare alla fine...\n";
 	cout<<endl;
 	cout<<"Scegli un personaggio per continuare...\n";
-	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticitÃ  ed Ã¨ molto furbo.\n";  
-	cout<<"  Astuzia=4 AgilitÃ =5 Coraggio=2 \n";
+	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticità ed è molto furbo.\n";  
+	cout<<"  Astuzia=4 Agilità=5 Coraggio=2 \n";
 	cout<<endl;
-	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare lâ€™avventura! \n";
-	cout<<"Grazie alla sua etÃ  e alla sua saggezza, Ã¨ in grado di risolvere qualsiasi tipo di enigma, anche i piÃ¹ complicati!\n";  
-	cout<<"  Astuzia=5 AgilitÃ =1 Coraggio=3\n";
+	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare l’avventura! \n";
+	cout<<"Grazie alla sua età e alla sua saggezza, è in grado di risolvere qualsiasi tipo di enigma, anche i più complicati!\n";  
+	cout<<"  Astuzia=5 Agilità=1 Coraggio=3\n";
 	cout<<endl;
-	cout<<"-Melany: una ragazzina dolce e innocenteâ€¦.allâ€™apparenza! In realtÃ  Melany ha un grande coraggio,\n";
+	cout<<"-Melany: una ragazzina dolce e innocente….all’apparenza! In realtà Melany ha un grande coraggio,\n";
 	cout<<"non si ferma davanti a niente a nessuno, una vera e propria temeraria!\n ";
-	cout<<"  Astuzia=2 AgilitÃ =3 Coraggio=5\n";
+	cout<<"  Astuzia=2 Agilità=3 Coraggio=5\n";
 	cout<<endl;
 	cout<<"-Alfred: il vero e proprio intelligentone...purtroppo gli piacciono davvero tanto le merendine!";
-	cout<<"Con la sua intelligenza, nulla, nemmeno il piÃ¹ difficile degli indovinelli puÃ² fermarlo...\n";
-	cout<<"speriamo perÃ² che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
-	cout<<"  Astuzia=5 AgilitÃ =1, Coraggio 3 \n";
+	cout<<"Con la sua intelligenza, nulla, nemmeno il più difficile degli indovinelli può fermarlo...\n";
+	cout<<"speriamo però che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
+	cout<<"  Astuzia=5 Agilità=1, Coraggio 3 \n";
 	cout<<endl;
 	cout<<"Bene, ora e' il momento di scegliere il personaggio che vuoi essere in questa fantastica avventura!\n";
 	cout<<"Chi vuoi essere tra: Zack, John, Melany e Alfred?"<<endl;
@@ -207,7 +207,7 @@ int main(void){
 	cout<<"Se invece sceglierai la strada sulla destra, arriverai una fitta vegetazione...";
 	cout<<endl;
 	cout<<"Fai la tua scelta!\n"; 
-	cout <<"Digita 1 per scegliere la strada che ti portera alle cascate, \n Digita 2 per scegliere la strada che ti porterÃ  nella fitta vegetazione...\n";
+	cout <<"Digita 1 per scegliere la strada che ti portera alle cascate, \n Digita 2 per scegliere la strada che ti porterà nella fitta vegetazione...\n";
 	cout<<"SCELTA ...  ";
 	cin>>scelta_bivio1;
 	cout<<endl;
@@ -230,10 +230,11 @@ int main(void){
 	Quadrato cubo;
 	cubo.Assegna (4.0);
 	if (superficie==(cubo.Area()*6)){
- 		cout<<"Risposta corretta \n";
-	}else
+ 		cout<<"Risposta corretta! \n";
+	}else{
  		cout<<"Risposta errara! \n";
  		numero_vite=numero_vite-1;
+ 	}
 	vite(numero_vite);
 	cout<<"Numero vite rimaste ... "<<numero_vite<<endl;
 	cout<<"Numero suggerimenti rimasti ... "<<n_suggerimenti<<endl;
@@ -267,9 +268,10 @@ int main(void){
 	z=x.secondiTot(r);
 	if(digitazione_secondi_totali==z.getSecondi()){
 		cout<<"Risposta esatta!! Fortissimo";
-		}else
-			cout<<"Risposta Errata perdi una vita \n";
-    		numero_vite=numero_vite-1;
+	}else{
+		cout<<"Risposta Errata perdi una vita \n";
+    	numero_vite=numero_vite-1;
+	}
 	vite(numero_vite);//funzione che conta le vite	
     cout<<"Numero vite rimaste ... "<<numero_vite<<endl;
 	cout<<"Numero suggerimenti rimasti ... "<<n_suggerimenti<<endl;
@@ -277,28 +279,34 @@ int main(void){
     Rettangolo prato;
  	prato.Assegna(5.0, 4.0);
  	cout<<"attenzione per superare il livello dovrai tagliare un prato rettangolare 5 x 4 \n";
- 	cout<<"Quanta area di giardino dovrai tagliare per completare il livello";
+ 	cout<<"Quanta area di giardino dovrai tagliare per completare il livello ";
  	cin>>prato_da_tagliare;
  	if (prato_da_tagliare==prato.Area()){
  		cout<<"Risposta corretta \n";
-	}else
- 		cout<<"Risposta errara! \n";
+	}else{
+ 		cout<<"Risposta errata! \n";
  		numero_vite=numero_vite-1;
+ 	}
  	vite(numero_vite);
  	cout<<"Numero vite rimaste ... "<<numero_vite<<endl;
 	cout<<"Numero suggerimenti rimasti ... "<<n_suggerimenti<<endl;
 //LANCIO DADO PER PROSEGUIRE
 	cout<<"Attenzione per proseguire dovrai lanciare 2 dadi e la somma di questi dadi deve dare 10...\n";
 	cout<<"Hai 3 tentativi \n";
+	Sleep(1000);
 	int n_tentativi=3;
 	Dado d1(6);//6 numero di facce
 	Dado d2(6);
 	while(n_tentativi!=0 or d1.lancioDado()+d2.lancioDado()==10){
+		Sleep(100);
 		cout<<d1.lancioDado()<<" "<<d2.lancioDado()<<endl;
 		n_tentativi--;
 	}
-	if(d1.lancioDado()+d2.lancioDado()==10)
-		cout<<"Prova passata";
-	cout<<"prova non passata, il gioco finisce qua;\n";
+	if(d1.lancioDado()+d2.lancioDado()==10){
+		cout<<"Prova passata \n";
+	}else{
+		cout<<"Prova non passata, il gioco finisce qua;\n";
+	}
 	vite1(0);//funzione fine gioco
 }
+
