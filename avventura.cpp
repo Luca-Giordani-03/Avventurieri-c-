@@ -57,13 +57,13 @@ class Rettangolo {
  			return base*altezza;
  		}
 };
-int vite(int &numero_vite){
+int vite(int &numero_vite){//se è 0 finisce il gioco
 	if(numero_vite==0){
 		cout<<"Mi dispiace hai perso!! gioco finito";
 		exit(EXIT_SUCCESS);//definita nell' cstdlib EXIT_SUCCESS --> restituisce un valore intero
 	}
 }
-int vite1(int i){
+int vite1(int i){//se non passa la prova finisce il gioco
 	if(i==0){
 		exit(EXIT_SUCCESS);//definita nell' cstdlib EXIT_SUCCESS --> restituisce un valore intero ed esce
 	}
