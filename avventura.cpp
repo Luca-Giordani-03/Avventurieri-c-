@@ -156,10 +156,11 @@ int main(void){
 	int lato = 4;
 	int numero_vite = 3;
 	int prato_da_tagliare=0;
+	int n_tentativi=3;
+	int superficie=0;
 	int b[ROWS][COLUMNS];
 	//x = getx();
 	//y = gety();
-//	int invio;
 	string nome_personaggio;
 	int n_suggerimenti=3;
 	int scelta_bivio1;
@@ -228,7 +229,6 @@ int main(void){
 	cout<<"Numero vite rimaste ... "<<numero_vite<<endl;
 	cout<<"Numero suggerimenti rimasti ... "<<n_suggerimenti<<endl;
 //AREA QUADRATO 
-	int superficie=0;
 	cout<<"Molto bene per preseguire dovrai stabilire la superficie totale di un cubo, le faccie sono di lato 4\n";
 	cin>>superficie;
 	Quadrato cubo;
@@ -298,11 +298,10 @@ int main(void){
 	cout<<"Attenzione per proseguire dovrai lanciare 2 dadi e la somma di questi dadi deve dare 10...\n";
 	cout<<"Hai 3 tentativi \n";
 	Sleep(1000);
-	int n_tentativi=3;
 	Dado d1(6);//6 numero di facce
 	Dado d2(6);
 	while(n_tentativi!=0 or d1.lancioDado()+d2.lancioDado()==10){
-		Sleep(100);
+		Sleep(1000);
 		cout<<d1.lancioDado()<<" "<<d2.lancioDado()<<endl;
 		n_tentativi--;
 	}
