@@ -6,6 +6,7 @@
 #include <windows.h>
 #define ROWS 4
 #define COLUMNS 4
+#define DIM 10
 using namespace std;
 //indovinello conversione in secondi
 class Time{
@@ -65,6 +66,7 @@ int vite(int &numero_vite){//se è 0 finisce il gioco
 }
 int vite1(int i){//se non passa la prova finisce il gioco
 	if(i==0){
+		cout<<"prova non passata";
 		exit(EXIT_SUCCESS);//definita nell' cstdlib EXIT_SUCCESS --> restituisce un valore intero ed esce
 	}
 }
@@ -73,14 +75,11 @@ class Dado{
 		int n_Facce;
 	public:
 		Dado(int num_Facce){
-			if(num_Facce > 0)
-				n_Facce=num_Facce;
-			else
-				n_Facce=6;
+			n_Facce=6;
 			srand(time(NULL));
 		}
 		int lancioDado(){
-			return rand()%n_Facce +1; //da 1 a 6 dipende dal numero delle facce
+			return rand()%n_Facce+1; //da 1 a 6 dipende dal numero delle facce
 		}
 };
 //indovinello matrice diagonale principale
@@ -156,7 +155,7 @@ int main(void){
 	int lato = 4;
 	int numero_vite = 3;
 	int prato_da_tagliare=0;
-	int n_tentativi=3;
+	int n_tentativi=5;
 	int superficie=0;
 	int b[ROWS][COLUMNS];
 	//x = getx();
@@ -296,21 +295,23 @@ int main(void){
 	cout<<"Numero suggerimenti rimasti ... "<<n_suggerimenti<<endl;
 //LANCIO DADO PER PROSEGUIRE
 	cout<<"Attenzione per proseguire dovrai lanciare 2 dadi e la somma di questi dadi deve dare 10...\n";
-	cout<<"Hai 3 tentativi \n";
-	Sleep(1000);
-	Dado d1(6);//6 numero di facce
+	cout<<"Hai 5 tentativi"<<endl;
+	int conta=0;
+	Dado d1(6);
 	Dado d2(6);
-	while(n_tentativi!=0 or d1.lancioDado()+d2.lancioDado()==10){
-		Sleep(1000);
-		cout<<d1.lancioDado()<<" "<<d2.lancioDado()<<endl;
-		Sleep(100);
+	int dd1=0;//diventa il lancio del primo dado
+	int dd2=0;//diventa il lanncio del secondo dado
+	int u=1;
+	while(n_tentativi!=0){
+		dd1=d1.lancioDado();
+		dd2=d2.lancioDado();
+		cout<<dd1<<" "<<dd2<<endl;
+		if((dd1+dd2)==10)
+			conta++;
 		n_tentativi--;
 	}
-	if(d1.lancioDado()+d2.lancioDado()==10){
-		cout<<"Prova passata \n";
-	}else{
-		cout<<"Prova non passata, il gioco finisce qua;\n";
+	if (conta==0)
 		vite1(0);
-	}
+	cout<<"Hai vinto!!!";
 }
 
