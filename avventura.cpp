@@ -161,10 +161,14 @@ int main(void){
 	//x = getx();
 	//y = gety();
 	string nome_personaggio;
-	string Zack, zack;
-	string Melany, melany;
-	string John, john;
-	string Alfred, alfred;
+	string stringa1= "Zack";
+	string stringa1minuscola="zack";
+	string stringa2= "Melany";
+	string stringa2minuscola= "melany";
+	string stringa3="John";
+	string stringa3minuscola= "john";
+	string stringa4="Alfred";
+	string stringa4minuscola= "alfred";
 	
 	int n_suggerimenti=3;
 	int scelta_bivio1;
@@ -188,6 +192,7 @@ int main(void){
 	cout<<"territorio viene scoperto da un nuovo individuo,\n"; 
 	cout<<"hai solo una soluzione per scappare, arrivare alla fine...\n";
 	cout<<endl;
+	Sleep (16000);
 	cout<<"Scegli un personaggio per continuare...\n";
 	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticità ed è molto furbo.\n";  
 	cout<<"  Astuzia=4 Agilità=5 Coraggio=2 \n";
@@ -208,17 +213,19 @@ int main(void){
 	cout<<"Bene, ora e' il momento di scegliere il personaggio che vuoi essere in questa fantastica avventura!\n";
 	cout<<"Chi vuoi essere tra: Zack, John, Melany e Alfred?"<<endl;
 	cin>>nome_personaggio;
-	/*while (nome_personaggio != Zack and nome_personaggio!= zack and nome_personaggio!= John and nome_personaggio!= zack  and nome_personaggio!= Melany and nome_personaggio!= melany and nome_personaggio!= Alfred and nome_personaggio!= alfred){
-		cout<<"Personaggio inesistente! Scegliere tra: Zack, John, Melany e Alfred";
+	while (nome_personaggio != stringa1 and nome_personaggio!= stringa2 and nome_personaggio!= stringa3 and nome_personaggio!= stringa4 and nome_personaggio != stringa1minuscola and nome_personaggio != stringa2minuscola and nome_personaggio != stringa3minuscola and nome_personaggio != stringa4minuscola ){
+		cout<<"Personaggio inesistente! Scegliere tra: Zack, John, Melany e Alfred: \n";
 		cin>>nome_personaggio;
-	}*/
+	}
 	cout<<endl;
-	cout<<"Ottima scelta "<<nome_personaggio<<"! E' il momento di iniziare!";
+	cout<<"Ottima scelta "<<nome_personaggio<<"!; E' il momento di iniziare! Sei pronto?\n";
 	cout<<endl;
+	Sleep (3000);
 	cout<<"Cominciato il tuo cammino, i problemi non tardano ad arrivare...ti trovi davanti ad un bivio.\n";
 	cout<<"Puoi scegliere due strade: se vai a sinistra, raggiungerai le cascate";
 	cout<<"Se invece sceglierai la strada sulla destra, arriverai una fitta vegetazione...";
 	cout<<endl;
+	Sleep (5000);
 	cout<<"Fai la tua scelta!\n"; 
 	cout <<"Digita 1 per scegliere la strada che ti portera alle cascate, \n Digita 2 per scegliere la strada che ti porterà nella fitta vegetazione...\n";
 	cout<<"SCELTA ...  ";
@@ -228,10 +235,16 @@ int main(void){
 		cout<<"Perfetto! Dirigiamoci verso le cascate!";
 		cout<<endl;
 	} 
-	if(scelta_bivio1==2){
+	else if(scelta_bivio1==2){
 		cout<<"Perfetto! Dirigiamoci verso la vegetazione!";
 		cout<<endl;
 	}
+	else if(scelta_bivio1!=1 or scelta_bivio1!=2){
+		cout<<"Attenzione! Hai solo due scelte! Digita 1 per scegliere la strada che ti portera alle cascate, \n Digita 2 per scegliere la strada che ti porterà nella fitta vegetazione...\n";	
+		cin>>scelta_bivio1;
+	}
+
+	cout<<"Ti trovi davanti al tuo primo pericolo!";
 	cout<<"Mentre cammini, trovi davanti a te un burrone, per attraversarlo dovrai usare la carrucola che collega un'estermità all'altra... \n";
 	cout<<endl;
 	cout<<"C'e' solo un problema, la carrucola non partira', a meno che tu non risolva un semplice rompicapo...\n";
@@ -253,7 +266,7 @@ int main(void){
 	if (superficie==(cubo.Area()*6)){
  		cout<<"Risposta corretta! \n";
 	}else{
- 		cout<<"Risposta errara! \n";
+ 		cout<<"Risposta errata! \n";
  		numero_vite=numero_vite-1;
  	}
 	vite(numero_vite);
@@ -332,3 +345,4 @@ int main(void){
 		vite1(0);
 	cout<<"Hai vinto!!!";
 }
+
