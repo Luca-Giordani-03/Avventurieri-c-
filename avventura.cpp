@@ -58,7 +58,7 @@ class Rettangolo {
  			return base*altezza;
  		}
 };
-int vite(int &numero_vite){//se è 0 finisce il gioco
+int vite(int &numero_vite){//se Ã¨ 0 finisce il gioco
 	if(numero_vite==0){
 		cout<<"Mi dispiace hai perso!! gioco finito";
 		exit(EXIT_SUCCESS);//definita nell' cstdlib EXIT_SUCCESS --> restituisce un valore intero
@@ -112,7 +112,7 @@ int matrice(int b[][COLUMNS],int &numero_vite,int &suggerimenti){
 		cin>>check_matrice;
 	}
     while(check_matrice==4){
-    	cout<<"la diagonale principale è composta dai numeri che hanno stessi indici \n";
+    	cout<<"la diagonale principale Ã¨ composta dai numeri che hanno stessi indici \n";
     	suggerimenti=suggerimenti-1;
     	cin>>check_matrice;
 	}
@@ -161,6 +161,11 @@ int main(void){
 	//x = getx();
 	//y = gety();
 	string nome_personaggio;
+	string Zack, zack;
+	string Melany, melany;
+	string John, john;
+	string Alfred, alfred;
+	
 	int n_suggerimenti=3;
 	int scelta_bivio1;
 	int digitazione_secondi_totali=0;
@@ -184,25 +189,29 @@ int main(void){
 	cout<<"hai solo una soluzione per scappare, arrivare alla fine...\n";
 	cout<<endl;
 	cout<<"Scegli un personaggio per continuare...\n";
-	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticità ed è molto furbo.\n";  
-	cout<<"  Astuzia=4 Agilità=5 Coraggio=2 \n";
+	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticitÃ  ed Ã¨ molto furbo.\n";  
+	cout<<"  Astuzia=4 AgilitÃ =5 Coraggio=2 \n";
 	cout<<endl;
-	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare l’avventura! \n";
-	cout<<"Grazie alla sua età e alla sua saggezza, è in grado di risolvere qualsiasi tipo di enigma, anche i più complicati!\n";  
-	cout<<"  Astuzia=5 Agilità=1 Coraggio=3\n";
+	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare lâ€™avventura! \n";
+	cout<<"Grazie alla sua etÃ  e alla sua saggezza, Ã¨ in grado di risolvere qualsiasi tipo di enigma, anche i piÃ¹ complicati!\n";  
+	cout<<"  Astuzia=5 AgilitÃ =1 Coraggio=3\n";
 	cout<<endl;
-	cout<<"-Melany: una ragazzina dolce e innocente….all’apparenza! In realtà Melany ha un grande coraggio,\n";
+	cout<<"-Melany: una ragazzina dolce e innocenteâ€¦.allâ€™apparenza! In realtÃ  Melany ha un grande coraggio,\n";
 	cout<<"non si ferma davanti a niente a nessuno, una vera e propria temeraria!\n ";
-	cout<<"  Astuzia=2 Agilità=3 Coraggio=5\n";
+	cout<<"  Astuzia=2 AgilitÃ =3 Coraggio=5\n";
 	cout<<endl;
 	cout<<"-Alfred: il vero e proprio intelligentone...purtroppo gli piacciono davvero tanto le merendine!";
-	cout<<"Con la sua intelligenza, nulla, nemmeno il più difficile degli indovinelli può fermarlo...\n";
-	cout<<"speriamo però che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
-	cout<<"  Astuzia=5 Agilità=1, Coraggio 3 \n";
+	cout<<"Con la sua intelligenza, nulla, nemmeno il piÃ¹ difficile degli indovinelli puÃ² fermarlo...\n";
+	cout<<"speriamo perÃ² che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
+	cout<<"  Astuzia=5 AgilitÃ =1, Coraggio 3 \n";
 	cout<<endl;
 	cout<<"Bene, ora e' il momento di scegliere il personaggio che vuoi essere in questa fantastica avventura!\n";
 	cout<<"Chi vuoi essere tra: Zack, John, Melany e Alfred?"<<endl;
-	cin>>nome_personaggio;//controllare le lettere (while)
+	cin>>nome_personaggio;
+	/*while (nome_personaggio != Zack and nome_personaggio!= zack and nome_personaggio!= John and nome_personaggio!= zack  and nome_personaggio!= Melany and nome_personaggio!= melany and nome_personaggio!= Alfred and nome_personaggio!= alfred){
+		cout<<"Personaggio inesistente! Scegliere tra: Zack, John, Melany e Alfred";
+		cin>>nome_personaggio;
+	}*/
 	cout<<endl;
 	cout<<"Ottima scelta "<<nome_personaggio<<"! E' il momento di iniziare!";
 	cout<<endl;
@@ -211,16 +220,25 @@ int main(void){
 	cout<<"Se invece sceglierai la strada sulla destra, arriverai una fitta vegetazione...";
 	cout<<endl;
 	cout<<"Fai la tua scelta!\n"; 
-	cout <<"Digita 1 per scegliere la strada che ti portera alle cascate, \n Digita 2 per scegliere la strada che ti porterà nella fitta vegetazione...\n";
+	cout <<"Digita 1 per scegliere la strada che ti portera alle cascate, \n Digita 2 per scegliere la strada che ti porterÃ  nella fitta vegetazione...\n";
 	cout<<"SCELTA ...  ";
 	cin>>scelta_bivio1;
 	cout<<endl;
 	if(scelta_bivio1==1){
 		cout<<"Perfetto! Dirigiamoci verso le cascate!";
+		cout<<endl;
 	} 
 	if(scelta_bivio1==2){
 		cout<<"Perfetto! Dirigiamoci verso la vegetazione!";
+		cout<<endl;
 	}
+	cout<<"Mentre cammini, trovi davanti a te un burrone, per attraversarlo dovrai usare la carrucola che collega un'estermitÃ  all'altra... \n";
+	cout<<endl;
+	cout<<"C'e' solo un problema, la carrucola non partira', a meno che tu non risolva un semplice rompicapo...\n";
+	cout<<endl;
+	cout<<endl;
+	cout<<"Attenzione! Se non riuscirai a risolvere il rompicapo verrai teletrasportato dall'altra parte del burrone , MA PERDERAI UNA VITA!\n";
+	cout<<endl;
 //SOMMA DIAGONALE PRINCIPALE
 	cout<<"stabilisci la somma della diagonale principale \n";
 	matrice(b,numero_vite,n_suggerimenti);//MATRICE QUADRATA TROVA SOMMA
@@ -314,4 +332,3 @@ int main(void){
 		vite1(0);
 	cout<<"Hai vinto!!!";
 }
-
