@@ -133,22 +133,25 @@ int matrice(int b[][COLUMNS],int &numero_vite,int &suggerimenti){
     cout<<" 4 -  Suggerimento"<<endl;
     cin>>check_matrice;
     if  (check_matrice<1 or check_matrice>4){
-    	cout<<"Attenzione! Per rispondere devi digitare un numero da 1 a 4!";
+    	cout<<"Attenzione! Per rispondere devi digitare un numero da 1 a 4!\n";
 		cout<<"Inserisci di nuovo la risposta";
 		cin>>check_matrice;
 	}
-    while(check_matrice==4){
+    while(check_matrice==4 and suggerimenti!=1){
     	cout<<"la diagonale principale è composta dai numeri che hanno stessi indici \n";
-    	suggerimenti=suggerimenti-1;//classe suggerimenti per contollo se = a 0;
+    	suggerimenti=suggerimenti-1;
     	cin>>check_matrice;
+    	if(suggerimenti==1){//se digita più volte il numero 4 appena finiscono i suggerimenti perde una vita 
+    		check_matrice=1;//prende il valore di risposta sbagliata
+		}
 	}
     if(check_matrice==1 or check_matrice==3){
     	cout<<"Risposta Errata perdi una vita \n";
     	numero_vite=numero_vite-1;
    	}else
-   		cout<<"Risposta corretta!";
+   		cout<<"Risposta corretta!\n";
 }
-class Quadrato {
+class Quadrato{
  	private:
  		double lato;
  	public:
