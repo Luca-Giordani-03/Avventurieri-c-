@@ -75,7 +75,7 @@ class Ricorsiva{
 			return numero+Potenza(numero,potenza-1);
 		}
 };
-int vite(int &numero_vite){//se è 0 finisce il giocoù
+int vite(int &numero_vite){//se Ã¨ 0 finisce il giocoÃ¹
 	fstream fileAvventura;
 	fileAvventura.open("Avventura.txt",ios::out);
 	if(numero_vite==0){
@@ -138,10 +138,10 @@ int matrice(int b[][COLUMNS],int &numero_vite,int &suggerimenti){
 		cin>>check_matrice;
 	}
     while(check_matrice==4 and suggerimenti!=1){
-    	cout<<"la diagonale principale è composta dai numeri che hanno stessi indici \n";
+    	cout<<"la diagonale principale Ã¨ composta dai numeri che hanno stessi indici \n";
     	suggerimenti=suggerimenti-1;
     	cin>>check_matrice;
-    	if(suggerimenti==1){//se digita più volte il numero 4 appena finiscono i suggerimenti perde una vita 
+    	if(suggerimenti==1){//se digita piÃ¹ volte il numero 4 appena finiscono i suggerimenti perde una vita 
     		check_matrice=1;//prende il valore di risposta sbagliata
 		}
 	}
@@ -197,20 +197,20 @@ int main(void){
 	cout<<endl;
 	Sleep (5000);
 	cout<<"Scegli un personaggio per continuare...\n";
-	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticità ed è molto furbo.\n";  
+	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticita' ed e' molto furbo.\n";  
 	cout<<"  Astuzia=4 Agilita'=5 Coraggio=2 \n";
 	cout<<endl;
-	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare l’avventura! \n";
-	cout<<"Grazie alla sua età e alla sua saggezza, è in grado di risolvere qualsiasi tipo di enigma, anche i più complicati!\n";  
+	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare lâ€™avventura! \n";
+	cout<<"Grazie alla sua eta' e alla sua saggezza, e' in grado di risolvere qualsiasi tipo di enigma, anche i piÃ¹ complicati!\n";  
 	cout<<"  Astuzia=5 Agilita'=1 Coraggio=3\n";
 	cout<<endl;
-	cout<<"-Melany: una ragazzina dolce e innocente….all’apparenza! In realtà Melany ha un grande coraggio,\n";
+	cout<<"-Melany: una ragazzina dolce e innocenteâ€¦.allâ€™apparenza! In realta' Melany ha un grande coraggio,\n";
 	cout<<"non si ferma davanti a niente a nessuno, una vera e propria temeraria!\n ";
 	cout<<"  Astuzia=2 Agilita'=3 Coraggio=5\n";
 	cout<<endl;
 	cout<<"-Alfred: il vero e proprio intelligentone...purtroppo gli piacciono davvero tanto le merendine!";
-	cout<<"Con la sua intelligenza, nulla, nemmeno il più difficile degli indovinelli può fermarlo...\n";
-	cout<<"speriamo però che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
+	cout<<"Con la sua intelligenza, nulla, nemmeno il piÃ¹ difficile degli indovinelli puo' fermarlo...\n";
+	cout<<"speriamo pero' che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
 	cout<<"  Astuzia=5 Agilita'=1, Coraggio 3 \n";
 	cout<<endl;
 	Sleep (15000);
@@ -231,11 +231,11 @@ int main(void){
 	cout<<endl;
 	Sleep (5000);
 	cout<<"Fai la tua scelta!\n"; 
-	cout <<"Digita 1 per scegliere la strada che ti portera alle cascate, \n Digita 2 per scegliere la strada che ti porterà nella fitta vegetazione...\n";
+	cout <<"Digita 1 per scegliere la strada che ti portera' alle cascate, \n Digita 2 per scegliere la strada che ti portera' nella fitta vegetazione...\n";
 	cout<<"SCELTA ...  ";
 	cin>>scelta_bivio1;
 	while(scelta_bivio1!=1 and scelta_bivio1!=2){
-		cout<<"Attenzione! Hai solo due scelte! Digita 1 per scegliere la strada che ti portera alle cascate, \n Digita 2 per scegliere la strada che ti porterà nella fitta vegetazione...\n";	
+		cout<<"Attenzione! Hai solo due scelte! Digita 1 per scegliere la strada che ti portera' alle cascate, \n Digita 2 per scegliere la strada che ti portera' nella fitta vegetazione...\n";	
 		cin>>scelta_bivio1;
 	}
 	if(scelta_bivio1==1){
@@ -254,9 +254,9 @@ int main(void){
 	cout<<"Numero suggerimenti rimasti ... "<<n_suggerimenti<<endl;
 //AREA QUADRATO 
 	Sleep(5000);
-	cout<<"Mentre stai camminando, inciampi e cadi in una trappola! Per liberarti da quella trappola, è necessario che tu risolva l'enigma che ti viene proposto, altrimenti, se non riuscirai a risolvero, perderai una vita!\n";
+	cout<<"Mentre stai camminando, inciampi e cadi in una trappola! Per liberarti da quella trappola, Ã¨ necessario che tu risolva l'enigma che ti viene proposto, altrimenti, se non riuscirai a risolvero, perderai una vita!\n";
 	cout<<"Molto bene per preseguire dovrai stabilire la superficie totale di un cubo, le facce sono di lato 4\n";
-	cout<<"Inserisci la superficie: \n";
+	cout<<"Inserisci la superficie del cubo: \n";
 	cin>>superficie;
 	Quadrato cubo;
 	cubo.Assegna (4.0);
@@ -311,7 +311,7 @@ int main(void){
 	cout<<"Numero suggerimenti rimasti ...  "<<n_suggerimenti<<endl;
 	Sleep(4000);
 //TROVARE AREA DA TAGLIARE
-	cout<<"Bene " <<nome_personaggio<< " siamo quasi arrivati alla fine! Ora, per proseguire, dovrai tagliare l'erba in un enorme giardino, mi raccomando però, prendi bene le misure!";
+	cout<<"Bene " <<nome_personaggio<< " siamo quasi arrivati alla fine! Ora, per proseguire, dovrai tagliare l'erba in un enorme giardino, mi raccomando perÃ², prendi bene le misure!";
 	cout<<endl;
     Rettangolo prato;
  	prato.Assegna(5.0, 4.0);
