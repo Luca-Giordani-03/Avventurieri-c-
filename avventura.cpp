@@ -334,12 +334,12 @@ int main(void){
 	cout<<"Penultima domanda prima del livello finale,\n";
 	cout<<"Per andare avanti completa questo livello \n";
 	Sleep(1000);
-	cout<<"Stabilisci la moltiplicazione tra due numeri 8 e 9 ricorsivamente\n";
+	cout<<"Stabilisci la moltiplicazione tra due numeri 11 e 11 \n";//ricorsiva
 	cout<<"Inserisci risultato:  ";
 	cin>>risultato;
 	cout<<endl; 
 	Ricorsiva r1;
-	if(risultato==r1.Potenza(8,9)){//classe ricorsiva
+	if(risultato==r1.Potenza(11,11)){//classe ricorsiva
 		cout<<"Livello superato!!! Preparati ad affrontare l'ultimo livello!\n";
 	}else{
 		cout<<"Hai perso una vita! Preparati ad affrontare l'ultimo livello!\n";
