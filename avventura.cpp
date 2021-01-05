@@ -12,10 +12,12 @@ using namespace std;
 //indovinello conversione in secondi
 class Time{
 	private:
+		//attributi
 		double ore;
 		double minuti;
 		double secondi;
 	public:
+		//metodi
 		void setOre(int r);
 		int getOre(void);
 		void setMinuti(int m);
@@ -24,6 +26,7 @@ class Time{
 		int getSecondi(void);
 		Time secondiTot (int);
 };
+//metodi di accesso
 void Time::setOre (int r){
 	ore=r;
 }
@@ -42,9 +45,10 @@ int Time::getMinuti (void){
 int Time::getSecondi(void){
 	return secondi;
 }
+//implementazione 
 Time Time::secondiTot(int){
 	Time t;
-	t.setSecondi((ore*60*60)+(minuti*60)+(secondi));
+	t.setSecondi((ore*3600)+(minuti*60)+(secondi));
 	return t;
 }
 class Rettangolo {
@@ -68,14 +72,14 @@ class Ricorsiva{
 			numero=n;
 			potenza=i;
 		}
-		int Potenza(int numero,int potenza){
+		int Potenza(int numero,int potenza){//numero=11  potenza=11 //11+(11,10) // 11+(11,9)
 			if(potenza==0){
 				return 0;
 			}
 			return numero+Potenza(numero,potenza-1);
 		}
 };
-int vite(int &numero_vite){//se Ã¨ 0 finisce il giocoÃ¹
+int vite(int &numero_vite){//se è 0 finisce il giocoù
 	fstream fileAvventura;
 	fileAvventura.open("Avventura.txt",ios::out);
 	if(numero_vite==0){
@@ -88,7 +92,7 @@ int vite(int &numero_vite){//se Ã¨ 0 finisce il giocoÃ¹
 int vite1(int i){//se non passa la prova finisce il gioco
 	fstream fileAvventura;
 	fileAvventura.open("Avventura.txt",ios::out);
-	if(i==0){
+	if(i==0){//in più
 		cout<<"HAI PERSO! GAME OVER :(";
 		fileAvventura<<"HAI PERSO IL GIOCO SEI ARRIVATO ALLA FINE...\n";
 		fileAvventura<<"NON HAI VINTO IL LANCIO DEI DADI... :( \n";
@@ -101,7 +105,8 @@ class Dado{
 		int n_Facce;
 	public:
 		Dado(int num_Facce){
-			n_Facce=6;
+			num_Facce=6;
+			n_Facce=num_Facce;
 			srand(time(NULL));
 		}
 		int lancioDado(){
@@ -138,10 +143,10 @@ int matrice(int b[][COLUMNS],int &numero_vite,int &suggerimenti){
 		cin>>check_matrice;
 	}
     while(check_matrice==4 and suggerimenti!=1){
-    	cout<<"la diagonale principale Ã¨ composta dai numeri che hanno stessi indici \n";
+    	cout<<"la diagonale principale è composta dai numeri che hanno stessi indici \n";
     	suggerimenti=suggerimenti-1;
     	cin>>check_matrice;
-    	if(suggerimenti==1){//se digita piÃ¹ volte il numero 4 appena finiscono i suggerimenti perde una vita 
+    	if(suggerimenti==1){//se digita più volte il numero 4 appena finiscono i suggerimenti perde una vita 
     		check_matrice=1;//prende il valore di risposta sbagliata
 		}
 	}
@@ -197,20 +202,20 @@ int main(void){
 	cout<<endl;
 	Sleep (5000);
 	cout<<"Scegli un personaggio per continuare...\n";
-	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticita' ed e' molto furbo.\n";  
+	cout<<"-Zack: ragazzo giovane e sportivo, ama lo sport, ha una grande atleticità ed è molto furbo.\n";  
 	cout<<"  Astuzia=4 Agilita'=5 Coraggio=2 \n";
 	cout<<endl;
-	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare lâ€™ avventura! \n";
-	cout<<"Grazie alla sua eta' e alla sua saggezza, e' in grado di risolvere qualsiasi tipo di enigma, anche i piu' complicati!\n";  
+	cout<<"-John: un uomo anziano, ma questo non vuol dire che non sia in grado di affrontare l'avventura! \n";
+	cout<<"Grazie alla sua età e alla sua saggezza, è in grado di risolvere qualsiasi tipo di enigma, anche i più complicati!\n";  
 	cout<<"  Astuzia=5 Agilita'=1 Coraggio=3\n";
 	cout<<endl;
-	cout<<"-Melany: una ragazzina dolce e innocenteâ€¦.allâ€™ apparenza! In realta' Melany ha un grande coraggio,\n";
+	cout<<"-Melany: una ragazzina dolce e innocente...all'apparenza! In realtà Melany ha un grande coraggio,\n";
 	cout<<"non si ferma davanti a niente a nessuno, una vera e propria temeraria!\n ";
 	cout<<"  Astuzia=2 Agilita'=3 Coraggio=5\n";
 	cout<<endl;
 	cout<<"-Alfred: il vero e proprio intelligentone...purtroppo gli piacciono davvero tanto le merendine!";
-	cout<<"Con la sua intelligenza, nulla, nemmeno il piu' difficile degli indovinelli puo' fermarlo...\n";
-	cout<<"speriamo pero' che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
+	cout<<"Con la sua intelligenza, nulla, nemmeno il piu' difficile degli indovinelli può fermarlo...\n";
+	cout<<"speriamo però che con il suo fisico non proprio atletico riesca a scappare dai pericoli! \n ";
 	cout<<"  Astuzia=5 Agilita'=1, Coraggio 3 \n";
 	cout<<endl;
 	Sleep (15000);
@@ -222,20 +227,19 @@ int main(void){
 		cout<<"Personaggio inesistente! Scegliere tra: Zack, John, Melany e Alfred: \n";
 		cin>>nome_personaggio;
 	}
-	cout<<"Ottima scelta "<<nome_personaggio<<"! E' il momento di iniziare!";
+	cout<<"Ottima scelta "<<nome_personaggio<<"! E' il momento di iniziare! \n";
 	cout<<endl;
-	Sleep (3000);
 	cout<<"Cominciato il tuo cammino, i problemi non tardano ad arrivare...ti trovi davanti ad un bivio.\n";
-	cout<<"Puoi scegliere due strade: se vai a sinistra, raggiungerai le cascate";
-	cout<<"Se invece sceglierai la strada sulla destra, arriverai una fitta vegetazione...";
+	cout<<"Puoi scegliere due strade: se vai a sinistra, raggiungerai le cascate \n";
+	cout<<"Se invece sceglierai la strada sulla destra, arriverai una fitta vegetazione...\n";
 	cout<<endl;
 	Sleep (5000);
 	cout<<"Fai la tua scelta!\n"; 
-	cout <<"Digita 1 per scegliere la strada che ti portera' alle cascate, \n Digita 2 per scegliere la strada che ti portera' nella fitta vegetazione...\n";
+	cout <<"Digita 1 per scegliere la strada che ti portera alle cascate, \nDigita 2 per scegliere la strada che ti porterà nella fitta vegetazione...\n";
 	cout<<"SCELTA ...  ";
 	cin>>scelta_bivio1;
 	while(scelta_bivio1!=1 and scelta_bivio1!=2){
-		cout<<"Attenzione! Hai solo due scelte! Digita 1 per scegliere la strada che ti portera' alle cascate, \n Digita 2 per scegliere la strada che ti portera' nella fitta vegetazione...\n";	
+		cout<<"Attenzione! Hai solo due scelte! Digita 1 per scegliere la strada che ti portera alle cascate, \nDigita 2 per scegliere la strada che ti porterà nella fitta vegetazione...\n";	
 		cin>>scelta_bivio1;
 	}
 	if(scelta_bivio1==1){
@@ -253,10 +257,10 @@ int main(void){
 	cout<<"Numero vite rimaste ... "<<numero_vite<<endl;
 	cout<<"Numero suggerimenti rimasti ... "<<n_suggerimenti<<endl;
 //AREA QUADRATO 
-	Sleep(5000);
-	cout<<"Mentre stai camminando, inciampi e cadi in una trappola! Per liberarti da quella trappola, Ã¨ necessario che tu risolva l'enigma che ti viene proposto, altrimenti, se non riuscirai a risolvero, perderai una vita!\n";
+	Sleep(1000);
+	cout<<"Mentre stai camminando, inciampi e cadi in una trappola! Per liberarti da quella trappola, è necessario che tu risolva l'enigma che ti viene proposto, altrimenti, se non riuscirai a risolvero, perderai una vita!\n";
 	cout<<"Molto bene per preseguire dovrai stabilire la superficie totale di un cubo, le facce sono di lato 4\n";
-	cout<<"Inserisci la superficie del cubo: \n";
+	cout<<"Inserisci la superficie: \n";
 	cin>>superficie;
 	Quadrato cubo;
 	cubo.Assegna (4.0);
@@ -272,7 +276,7 @@ int main(void){
 	cout<<endl;
 	Time x,y,z;
 	int r;
-	Sleep (3000);
+	Sleep (2000);
 	cout<<"Attenzione! Davanti a te trovi un fuoristrada, ma non vi e' nessun volante! Infatti, per farti trasportare da questo fuoristrada dovrai trasformare l'orario corrente in secondi!\n";
 	cout<<"Come di consueto, se indovinerai passerai illeso, altrimenti, perderai una vita!\n";
 //INDOVINELLO CONVERSIONE ORARIO IN SECONDI
@@ -309,9 +313,9 @@ int main(void){
 	vite(numero_vite);//funzione che conta le vite	
    	 cout<<"Numero vite rimaste ... "<<numero_vite<<endl;
 	cout<<"Numero suggerimenti rimasti ...  "<<n_suggerimenti<<endl;
-	Sleep(4000);
+	Sleep(1000);
 //TROVARE AREA DA TAGLIARE
-	cout<<"Bene " <<nome_personaggio<< " siamo quasi arrivati alla fine! Ora, per proseguire, dovrai tagliare l'erba in un enorme giardino, mi raccomando perÃ², prendi bene le misure!";
+	cout<<"Bene " <<nome_personaggio<< " siamo quasi arrivati alla fine! Ora, per proseguire, dovrai tagliare l'erba in un enorme giardino, mi raccomando però, prendi bene le misure!";
 	cout<<endl;
     Rettangolo prato;
  	prato.Assegna(5.0, 4.0);
@@ -334,7 +338,7 @@ int main(void){
 	cout<<"Penultima domanda prima del livello finale,\n";
 	cout<<"Per andare avanti completa questo livello \n";
 	Sleep(1000);
-	cout<<"Stabilisci la moltiplicazione tra due numeri 11 e 11 \n";//ricorsiva
+	cout<<"Stabilisci la moltiplicazione tra due numeri 11 e 11 ricorsivamente\n";
 	cout<<"Inserisci risultato:  ";
 	cin>>risultato;
 	cout<<endl; 
@@ -349,9 +353,10 @@ int main(void){
  	cout<<"Numero vite rimaste ... "<<numero_vite<<endl;
 	cout<<"Numero suggerimenti rimasti ... "<<n_suggerimenti<<endl;
 //LANCIO DADI
-	Sleep(5000);
+	Sleep(1000);
 	cout<<"BENE "<<nome_personaggio<<" SEI IN GAMBA! SEI ARRIVATO ALL'ULITMO LIVELLO, RISOLVILO PER USCIRE DA QUESTO POSTO!\n";
 	cout<<"Per superare questo livello devi lanciare due dadi e la somma deve dare 10 hai 5 tentativi\n";
+	Sleep(1000);
 	cout<<endl;
 	int conta=0;
 	Dado d1(6);
@@ -365,7 +370,7 @@ int main(void){
 		if((dd1+dd2)==10)
 			conta++;
 		n_tentativi--;
-		Sleep(100);
+		Sleep(500);
 	}
 	if (conta==0)
 		vite1(0);
